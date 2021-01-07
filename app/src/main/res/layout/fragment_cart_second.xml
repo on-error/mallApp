@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="14dp">
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Address"
+      android:textStyle="bold"
+      android:textSize="18dp"
+      android:id="@+id/tvAddress"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:layout_below="@+id/tvAddress"
+        android:id="@+id/edAddress"/>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/edAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zipcode"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:id="@+id/tvZipcode"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Zipcode"
+        android:layout_below="@+id/tvZipcode"
+        android:id="@+id/edZipcode"/>
+
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/edZipcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:id="@+id/tvPhone"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:layout_below="@+id/tvPhone"
+        android:id="@+id/edPhone"/>
+
+    <TextView
+        android:layout_below="@+id/edPhone"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:id="@+id/tvEmail"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:layout_below="@+id/tvEmail"
+        android:id="@+id/edEmail"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="next"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_above="@+id/linearLayout"
+        android:layout_marginBottom="20dp"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Warning"
+        android:textColor="#0047FF"
+        android:visibility="gone"
+        android:id="@+id/tvWarning"/>
+
+
+
+
+</RelativeLayout>

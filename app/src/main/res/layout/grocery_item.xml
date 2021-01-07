@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:id="@+id/parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:id="@+id/ivImage"
+            android:src="@mipmap/ic_launcher_round"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#9304F8"
+            android:text="price"
+            android:layout_alignEnd="@+id/ivImage"
+            android:textColor="#FFF"
+            android:padding="5dp"
+            android:id="@+id/tvPrice"/>
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:padding="6dp"
+            android:layout_below="@+id/ivImage"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GroceryItemActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        android:elevation="4dp"
+        android:id="@+id/toolbar"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="14dp"
+        android:textSize="15sp"
+        android:text="Add to cart"
+        android:id="@+id/btnAddToCart"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnAddToCart">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:id="@+id/firstRelLayout"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:id="@+id/tvProdName"
+                    android:textSize="16sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:text="Price"
+                    android:id="@+id/tvPrice"
+                    android:textColor="#5E00F3"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="320dp"
+                android:src="@mipmap/ic_launcher_round"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/firstRelLayout"
+                android:id="@+id/ivImage"/>
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_below="@+id/ivImage"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/starRelLayout">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/firstStarRelLayout">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_filled_star"
+                        android:id="@+id/firstFilledStar"
+                        android:visibility="gone"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_empty_star"
+                        android:layout_toRightOf="@+id/firstFilledStar"
+                        android:id="@+id/firstEmptyStar"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/secondStarRelLayout"
+                    android:layout_toRightOf="@+id/firstStarRelLayout">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_filled_star"
+                        android:id="@+id/secondFilledStar"
+                        android:visibility="gone"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_empty_star"
+                        android:layout_toRightOf="@+id/secondFilledStar"
+                        android:id="@+id/secondEmptyStar"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/thirdStarRelLayout"
+                    android:layout_toRightOf="@+id/secondStarRelLayout">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_filled_star"
+                        android:id="@+id/thirdFilledStar"
+                        android:visibility="gone"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_empty_star"
+                        android:layout_toRightOf="@+id/thirdFilledStar"
+                        android:id="@+id/thirdEmptyStar"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/starRelLayout"
+                android:text="Description"
+                android:layout_margin="10dp"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:id="@+id/tvDescription"
+                />
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_below="@+id/tvDescription"
+                android:id="@+id/reviewRelLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Review : "
+                    android:textStyle="bold"
+                    android:id="@+id/tvReview"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:text="( Add a Review )"
+                    android:layout_toRightOf="@+id/tvReview"
+                    android:textColor="#D30303"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/tvAddReview"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reviewRecView"
+                    android:layout_below="@+id/tvAddReview"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>
